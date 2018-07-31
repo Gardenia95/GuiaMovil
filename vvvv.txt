@@ -1,0 +1,59 @@
+package com.example.gperez.test1;
+
+import junit.framework.Assert;
+
+import org.jboss.netty.handler.codec.serialization.ObjectEncoder;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.File;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.List;
+
+import io.appium.java_client.android.AndroidDriver;
+
+/**
+ * Created by gperez on 4/5/2018.
+ */
+
+public class conection {
+
+    WebDriver driver;
+
+
+    public void connectAppium() throws Exception {
+
+        File app = new File(apkPath + apkFile);
+        URL url = new URL ("http://127.0.0.1:8081/wd/hub");
+        URLConnection urlConnection = url.openConnection();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("app", app.getAbsolutePath());
+
+        driver = new AndroidDriver(urlConnection.getURL(),
+                capabilities);
+    }
+
+    public void disconnectAppium() throws Exception {
+        driver.quit();
+    }
+
+
+    public void testVerifyElements() throws Exception {
+        List listElements = (List) driver.findElement(By.className("android.widget.EditText"));
+
+        WebElement email = (WebElement)listElements.get(0);
+       // email.sendKeys(usuario);
+        Assert.assertEquals("Email", email.getText());
+
+        WebElement password = (WebElement)listElements.get(1);
+        Assert.assertEquals("", password.getText());
+
+        WebElement boton = driver.findElement(By.className("android.widget.Button"));
+        boton.click();
+        Assert.assertEquals("Sign in or register", boton.getText());
+    }
+
+}

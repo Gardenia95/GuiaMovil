@@ -1,0 +1,27 @@
+@Test
+    public void splash() throws Exception {
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        boton = driver.findElement(By.id("com.medic.medicapp:id/tv_end_tutorial"));
+        boton.click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        WebElement iniciarsesion = driver.findElement(By.id("com.medic.medicapp:id/btn_pass_login"));
+        iniciarsesion.click();
+        numtelefono = driver.findElement(By.id("com.medic.medicapp:id/til_phone"));
+        numtelefono.sendKeys(telefono);
+
+        List<WebElement> lista = driver.findElements(By.className("android.widget.TextView"));
+        WebElement phone_error = lista.get(0);
+
+        System.out.println(phone_error.getText());
+
+        pass = driver.findElement(By.id("com.medic.medicapp:id/til_password"));
+        pass.sendKeys(password);
+        btniniciar = driver.findElement(By.id("com.medic.medicapp:id/btn_login"));
+        btniniciar.click();
+    }
+
+    public void Error (){
+        System.out.print("error");
+
+    }

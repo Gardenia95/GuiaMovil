@@ -1,0 +1,25 @@
+Ruta jdk, jre
+
+C:\Program Files\Java
+
+ Ruta de sdk Android 
+C:\Users\gperez\AppData\Local\Android\Sdk
+
+ Ruta ADB
+C:\Users\gperez\AppData\Local\Android\Sdk\platform-tools
+
+Ruta de appium
+C:\Program Files (x86)\Appium
+
+Ruta maven 
+
+Ubicacion de maven 
+C:\Users\gperez\Maven
+ejecutable 
+C:\Users\gperez\Maven\apache-maven-3.5.3\bin
+C:\Users\gperez\Downloads\AUT.apk
+
+4723
+
+http://gustavopeiretti.com/instalar-maven-en-windows/
+http://enmilocalfunciona.io/configuracion-entorno-de-testing-funcional-automatizado-para-android-selenium-appium/

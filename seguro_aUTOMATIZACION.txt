@@ -1,0 +1,29 @@
+https://cinepolis.com/canales-alternos-2018/juegos
+https://es.qr-code-generator.com/
+
+
+
+
+
+Para un buscador en selenium 
+https://stackoverflow.com/questions/33169327/handling-soft-keyboard-events-in-appium-android?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+
+android:id/statusBarBackground
+
+android:id/navigationBarBackground
+
+
+ //driver.hideKeyboard();
+        //driver.navigate().back(); Regresar
+/*
+        WebElement Display = driver.findElement(By.className("android.widget.ScrollView"));
+        TouchAction tc = new TouchAction((PerformsTouchActions) driver);
+        tc.tap(Display).perform();*/
+/*
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, String> scrollObject = new HashMap<String, String>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("element", ((RemoteWebElement) Display).getId());
+        js.executeScript("mobile: scroll", scrollObject);
+        //Button*/
